@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,200&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.main {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+}
+
+.main video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+}
+
+.main .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(19, 115, 194);
+    mix-blend-mode: overlay;
+}
+
+.main header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.main header .logo {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.main header .toggle {
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-right: 35px;
+}
+
+.main header .fa-times {
+    font-size: 25px;
+}
+
+.text {
+    position: relative;
+    z-index: 10;
+}
+
+.text h1 {
+    font-size: 3em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+}
+
+.text h2 {
+    font-size: 5em;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 1;
+}
+
+.text p {
+    margin: 20px 50px;
+    font-size: 1.2em;
+    max-width: 50%;
+    font-weight: 400;
+    color: #fff;
+}
+
+.text a {
+    display: inline-block;
+    background: #fff;
+    color: #111;
+    padding: 10px 70px;
+    margin-top: 10px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1.3em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    transition: 0.5s;
+}
+
+.text a:hover {
+    letter-spacing: 10px;
+}
+
+.social {
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    color: #fff;
+    font-size: 2.5em;
+    margin-right: 50px;
+    transition: 0.5s;
+}
+
+.social li a:hover {
+    font-size: 5em;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+nav.active {
+  z-index: 2;
+  transform: translateY(-10%);
+}
+
+nav .links {
+    position: absolute;
+    top: 30%;
+}
+
+nav ul {
+    position: relative;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav ul li a:hover {
+    color: #16a;
+    font-size: 30px;
+}
+
+nav p {
+    position: absolute;
+    padding: 25px;
+    bottom: 25px;
+    font-size: 0.9em;
+    font-weight: 300;
+    color: #111;
+    width: 75%;
+}
+
+@media (max-width: 1062px) {
+    .main,
+    .main header {
+        padding: 40px;
+    }
+
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text p {
+        font-size: 1em;
+    }
+
+    .text a {
+        font-size: 1em;
+    }
+
+    nav {
+        width: 250px;
+    }
+}
+
+@media (max-width: 689px) {
+    nav {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 420px) {
+    .main,
+    .main header {
+        padding: 5px;
+    }
+
+    .main header h2 {
+        line-height: 1em;
+    }
+    
+    .main header .logo {
+        font-size: 20px;
+    }
+    
+    .main header .toggle {
+        font-size: 30px;
+    }
+
+
+    .text h1 {
+        font-size: 2em;
+    }
+
+    .text h2 {
+        font-size: 3em;
+    }
+
+    .text p {
+        max-width: 100%;
+        margin: 20px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    .text a {
+        margin-left: 5px;
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    
+    .text a:hover {
+        letter-spacing: 6px;
+    }
+    .social {
+        bottom: 5px;
+        margin-left: 5px;
+    }
+
+    .social li a {
+        font-size: 2em;
+    }
+
+    nav .links {
+        top: 25%;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    nav p {
+        padding: 0px;
+        font-size: 13px;    
+    }
+}

@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Document</title>
+    <title>World of Dolphins</title>
 </head>
 <body>
-    <section>
+    <section class="main">
         <header>
-            <h2><a href="#">World of Dolphins</a></h2>
-            <div class="toggle"></div>
+            <h2><a href="#" class="logo">World of Dolphins</a></h2>
+            <i class="fas fa-bars toggle"></i>
         </header>
 
         <!-- Video Source -->
@@ -26,28 +26,38 @@
             <h2>Save Dolphins</h2>
 
             <p>Dolphin mortality rates used to be around 100,000 a year in the 1970s and they dropped to less than 3000 in 1999,
-                declining further to around 1000 per year more recently. While this is a resounding success story, 1000 dolphins
+                declining further to around 1000 per year more recently. <br>While this is a resounding success story, 1000 dolphins
                 a year is still 1000 dolphins too many, and these deaths can be avoided.</p>
             
             <a href="#">Explore</a>
         </div>
 
-        <div class="social">
-            <ul>
-                <li><a href="https://github.com/almost-good"><i class="fab fa-github"></i></a></li>
-                <li><a href="https://www.instagram.com/awicca_dev/"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-        </div>
+        <ul class = "social">
+            <li><a href="https://github.com/almost-good"><i class="fab fa-github"></i></a></li>
+            <li><a href="https://www.instagram.com/awicca_dev/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
     </section>
     <nav>
+        <div class="links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Dolphins</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
         <p>This website is practice material so none of the links are currently operating. Only exception to this rule are social links so feel free to check those out!</p>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Dolphins</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">About</a></li>
-        </ul>
     </nav>
+
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const navToggle = document.querySelector('nav')
+
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('fa-times')
+            navToggle.classList.toggle('active')
+        })
+    </script>
 </body>
 </html>
